@@ -62,27 +62,10 @@ function gameOn(){
 }
 
 function makeSound(btn){
-  switch(btn){
-    case 'green':
-      var green = new Audio("sounds/green.mp3");
-      green.play();
-      break;
-    case 'blue':
-      var blue = new Audio("sounds/blue.mp3");
-      blue.play();
-      break;
-    case 'yellow':
-      var yellow = new Audio("sounds/yellow.mp3");
-      yellow.play();
-      break;
-    case 'red':
-      var red = new Audio("sounds/red.mp3");
-      red.play();
-      break;
-    default:
-      console.log(btn);
-  }
+     var sound = new Audio("sounds/"+btn+".mp3");
+     sound.play();
 }
+
 $(document).one("keydown", function(){
   $("#level-title").text("Level " + lvl);
   tabcpu.push(pathToFollow());
